@@ -1,0 +1,295 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   '/Users/anzhen/.nvm/versions/node/v21.6.1/bin/node',
+1 verbose cli   '/Users/anzhen/node_modules/.bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save-dev',
+1 verbose cli   '@types/node'
+1 verbose cli ]
+2 info using npm@2.15.12
+3 info using node@v21.6.1
+4 verbose install initial load of /Users/anzhen/go/src/ai-test/packages/package.json
+5 warn package.json packages@1.0.0 No description
+6 warn package.json packages@1.0.0 No repository field.
+7 warn package.json packages@1.0.0 No README data
+8 verbose installManyTop reading scoped package data from /Users/anzhen/go/src/ai-test/packages/node_modules/@playwright/test/package.json
+9 verbose readDependencies loading dependencies from /Users/anzhen/go/src/ai-test/packages/package.json
+10 silly cache add args [ '@types/node', null ]
+11 verbose cache add spec @types/node
+12 silly cache add parsed spec Result {
+12 silly cache add   raw: '@types/node',
+12 silly cache add   scope: '@types',
+12 silly cache add   name: '@types/node',
+12 silly cache add   rawSpec: '',
+12 silly cache add   spec: 'latest',
+12 silly cache add   type: 'tag'
+12 silly cache add }
+13 silly addNamed @types/node@latest
+14 verbose addNamed "latest" is being treated as a dist-tag for @types/node
+15 info addNameTag [ '@types/node', 'latest' ]
+16 silly mapToRegistry name @types/node
+17 silly mapToRegistry scope (from package name) @types
+18 verbose mapToRegistry no registry URL found in name for scope @types
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry data Result {
+21 silly mapToRegistry   raw: '@types/node',
+21 silly mapToRegistry   scope: '@types',
+21 silly mapToRegistry   name: '@types/node',
+21 silly mapToRegistry   rawSpec: '',
+21 silly mapToRegistry   spec: 'latest',
+21 silly mapToRegistry   type: 'tag'
+21 silly mapToRegistry }
+22 silly mapToRegistry uri https://registry.npmjs.org/@types%2fnode
+23 verbose addNameTag registry:https://registry.npmjs.org/@types%2fnode not in flight; fetching
+24 verbose request uri https://registry.npmjs.org/@types%2fnode
+25 verbose request no auth needed
+26 info attempt registry request try #1 at 5:29:04 PM
+27 verbose request id 4a4c382bddf8e27e
+28 verbose etag W/"534b761030d61bbb27efab3ed66f6955"
+29 verbose lastModified Mon, 11 May 2026 22:25:43 GMT
+30 http request GET https://registry.npmjs.org/@types%2fnode
+31 http 304 https://registry.npmjs.org/@types%2fnode
+32 verbose headers {
+32 verbose headers   date: 'Tue, 12 May 2026 09:29:05 GMT',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'set-cookie': [
+32 verbose headers     '_cfuvid=PMFZSb9_MYt_2uCOektzxQoxW3igBJn28sKMjg8Y2uA-1778578145.4403455-1.0.1.1-6Gw1MFI_jxElRm.m1EHHLhI3OAyUVdorQCYxh.9XWkQ; HttpOnly; SameSite=None; Secure; Path=/; Domain=npmjs.org'
+32 verbose headers   ],
+32 verbose headers   'cf-ray': '9fa865a0ff9972d5-LAX',
+32 verbose headers   'cf-cache-status': 'HIT',
+32 verbose headers   'access-control-allow-origin': '*',
+32 verbose headers   age: '182',
+32 verbose headers   'cache-control': 'public, max-age=300',
+32 verbose headers   etag: '"534b761030d61bbb27efab3ed66f6955"',
+32 verbose headers   'last-modified': 'Mon, 11 May 2026 22:25:43 GMT',
+32 verbose headers   server: 'cloudflare',
+32 verbose headers   vary: 'Accept-Encoding'
+32 verbose headers }
+33 silly get cb [
+33 silly get   304,
+33 silly get   {
+33 silly get     date: 'Tue, 12 May 2026 09:29:05 GMT',
+33 silly get     connection: 'keep-alive',
+33 silly get     'set-cookie': [
+33 silly get       '_cfuvid=PMFZSb9_MYt_2uCOektzxQoxW3igBJn28sKMjg8Y2uA-1778578145.4403455-1.0.1.1-6Gw1MFI_jxElRm.m1EHHLhI3OAyUVdorQCYxh.9XWkQ; HttpOnly; SameSite=None; Secure; Path=/; Domain=npmjs.org'
+33 silly get     ],
+33 silly get     'cf-ray': '9fa865a0ff9972d5-LAX',
+33 silly get     'cf-cache-status': 'HIT',
+33 silly get     'access-control-allow-origin': '*',
+33 silly get     age: '182',
+33 silly get     'cache-control': 'public, max-age=300',
+33 silly get     etag: '"534b761030d61bbb27efab3ed66f6955"',
+33 silly get     'last-modified': 'Mon, 11 May 2026 22:25:43 GMT',
+33 silly get     server: 'cloudflare',
+33 silly get     vary: 'Accept-Encoding'
+33 silly get   }
+33 silly get ]
+34 verbose etag https://registry.npmjs.org/@types%2fnode from cache
+35 verbose get saving @types/node to /Users/anzhen/.npm/registry.npmjs.org/_40types_252fnode/.cache.json
+36 verbose correctMkdir /Users/anzhen/.npm correctMkdir not in flight; initializing
+37 silly addNameTag next cb for @types/node with tag latest
+38 silly addNamed @types/node@25.7.0
+39 verbose addNamed "25.7.0" is a plain semver version for @types/node
+40 silly cache afterAdd @types/node@25.7.0
+41 verbose afterAdd /Users/anzhen/.npm/@types/node/25.7.0/package/package.json not in flight; writing
+42 verbose correctMkdir /Users/anzhen/.npm correctMkdir not in flight; initializing
+43 verbose afterAdd /Users/anzhen/.npm/@types/node/25.7.0/package/package.json written
+44 silly install resolved [
+44 silly install resolved   {
+44 silly install resolved     name: '@types/node',
+44 silly install resolved     version: '25.7.0',
+44 silly install resolved     license: 'MIT',
+44 silly install resolved     _id: '@types/node@25.7.0',
+44 silly install resolved     maintainers: [ [Object] ],
+44 silly install resolved     contributors: [
+44 silly install resolved       [Object], [Object], [Object],
+44 silly install resolved       [Object], [Object], [Object],
+44 silly install resolved       [Object], [Object], [Object],
+44 silly install resolved       [Object], [Object], [Object],
+44 silly install resolved       [Object], [Object], [Object],
+44 silly install resolved       [Object], [Object], [Object],
+44 silly install resolved       [Object], [Object], [Object],
+44 silly install resolved       [Object], [Object], [Object]
+44 silly install resolved     ],
+44 silly install resolved     homepage: 'https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node',
+44 silly install resolved     dist: {
+44 silly install resolved       shasum: '7498f82e90dbdce7c34b75aaaa256c498a0ebe6c',
+44 silly install resolved       tarball: 'https://registry.npmjs.org/@types/node/-/node-25.7.0.tgz',
+44 silly install resolved       fileCount: 106,
+44 silly install resolved       integrity: 'sha512-z+pdZyxE+RTQE9AcboAZCb4otwcrvgHD+GlBpPgn0emDVt0ohrTMhAwlr2Wd9nZ+nihhYFxO2pThz3C5qSu2Eg==',
+44 silly install resolved       signatures: [Array],
+44 silly install resolved       unpackedSize: 2355934
+44 silly install resolved     },
+44 silly install resolved     main: '',
+44 silly install resolved     types: 'index.d.ts',
+44 silly install resolved     scripts: {},
+44 silly install resolved     _npmUser: { name: 'types', email: 'ts-npm-types@microsoft.com' },
+44 silly install resolved     repository: {
+44 silly install resolved       url: 'git+https://github.com/DefinitelyTyped/DefinitelyTyped.git',
+44 silly install resolved       type: 'git',
+44 silly install resolved       directory: 'types/node'
+44 silly install resolved     },
+44 silly install resolved     description: 'TypeScript definitions for node',
+44 silly install resolved     directories: {},
+44 silly install resolved     _nodeVersion: '24.14.1',
+44 silly install resolved     dependencies: { 'undici-types': '~7.21.0' },
+44 silly install resolved     typesVersions: { '<=5.6': [Object], '<=5.7': [Object] },
+44 silly install resolved     _hasShrinkwrap: false,
+44 silly install resolved     peerDependencies: {},
+44 silly install resolved     typeScriptVersion: '5.3',
+44 silly install resolved     _npmOperationalInternal: {
+44 silly install resolved       tmp: 'tmp/node_25.7.0_1778530014240_0.3203809811254401',
+44 silly install resolved       host: 's3://npm-registry-packages-npm-production'
+44 silly install resolved     },
+44 silly install resolved     typesPublisherContentHash: 'eddf50137d03f63ae7f6e4766ed9b825cc70a85ef2f7d5c89290fba06040ceed',
+44 silly install resolved     _shasum: '7498f82e90dbdce7c34b75aaaa256c498a0ebe6c',
+44 silly install resolved     _resolved: 'https://registry.npmjs.org/@types/node/-/node-25.7.0.tgz',
+44 silly install resolved     _from: '@types/node@latest',
+44 silly install resolved     bugs: {
+44 silly install resolved       url: 'https://github.com/DefinitelyTyped/DefinitelyTyped/issues'
+44 silly install resolved     },
+44 silly install resolved     readme: 'ERROR: No README data found!'
+44 silly install resolved   }
+44 silly install resolved ]
+45 info install @types/node@25.7.0 into /Users/anzhen/go/src/ai-test/packages
+46 info installOne @types/node@25.7.0
+47 verbose installOne of @types/node to /Users/anzhen/go/src/ai-test/packages not in flight; installing
+48 verbose correctMkdir /Users/anzhen/.npm/_locks correctMkdir not in flight; initializing
+49 verbose lock using /Users/anzhen/.npm/_locks/types-node-9d4da3653e0c941c.lock for /Users/anzhen/go/src/ai-test/packages/node_modules/@types/node
+50 silly install write writing @types/node 25.7.0 to /Users/anzhen/go/src/ai-test/packages/node_modules/@types/node
+51 verbose unbuild node_modules/@types/node
+52 silly gentlyRm /Users/anzhen/go/src/ai-test/packages/node_modules/@types/node is being purged from base /Users/anzhen/go/src/ai-test/packages
+53 verbose gentlyRm don't care about contents; nuking /Users/anzhen/go/src/ai-test/packages/node_modules/@types/node
+54 verbose tar unpack /Users/anzhen/.npm/@types/node/25.7.0/package.tgz
+55 verbose tar unpacking to /Users/anzhen/go/src/ai-test/packages/node_modules/@types/node
+56 silly gentlyRm /Users/anzhen/go/src/ai-test/packages/node_modules/@types/node is being purged
+57 verbose gentlyRm don't care about contents; nuking /Users/anzhen/go/src/ai-test/packages/node_modules/@types/node
+58 silly gunzTarPerm modes [ '755', '644' ]
+59 silly gunzTarPerm extractEntry
+60 silly gunzTarPerm extractEntry
+61 silly gunzTarPerm extractEntry
+62 silly gunzTarPerm extractEntry
+63 silly gunzTarPerm extractEntry
+64 silly gunzTarPerm extractEntry
+65 silly gunzTarPerm extractEntry
+66 silly gunzTarPerm extractEntry
+67 silly gunzTarPerm extractEntry
+68 silly gunzTarPerm extractEntry
+69 silly gunzTarPerm extractEntry
+70 silly gunzTarPerm extractEntry
+71 silly gunzTarPerm extractEntry
+72 silly gunzTarPerm extractEntry
+73 silly gunzTarPerm extractEntry
+74 silly gunzTarPerm extractEntry
+75 silly gunzTarPerm extractEntry
+76 silly gunzTarPerm extractEntry
+77 silly gunzTarPerm extractEntry
+78 silly gunzTarPerm extractEntry
+79 silly gunzTarPerm extractEntry
+80 silly gunzTarPerm extractEntry
+81 silly gunzTarPerm extractEntry
+82 silly gunzTarPerm extractEntry
+83 silly gunzTarPerm extractEntry
+84 silly gunzTarPerm extractEntry
+85 silly gunzTarPerm extractEntry
+86 silly gunzTarPerm extractEntry
+87 silly gunzTarPerm extractEntry
+88 silly gunzTarPerm extractEntry
+89 silly gunzTarPerm extractEntry
+90 silly gunzTarPerm extractEntry
+91 silly gunzTarPerm extractEntry
+92 silly gunzTarPerm extractEntry
+93 silly gunzTarPerm extractEntry
+94 silly gunzTarPerm extractEntry
+95 silly gunzTarPerm extractEntry
+96 silly gunzTarPerm extractEntry
+97 silly gunzTarPerm extractEntry
+98 silly gunzTarPerm extractEntry
+99 silly gunzTarPerm extractEntry
+100 silly gunzTarPerm extractEntry
+101 silly gunzTarPerm extractEntry
+102 silly gunzTarPerm extractEntry
+103 silly gunzTarPerm extractEntry
+104 silly gunzTarPerm extractEntry
+105 silly gunzTarPerm extractEntry
+106 silly gunzTarPerm extractEntry
+107 silly gunzTarPerm extractEntry
+108 silly gunzTarPerm extractEntry
+109 silly gunzTarPerm extractEntry
+110 silly gunzTarPerm extractEntry
+111 silly gunzTarPerm extractEntry
+112 silly gunzTarPerm extractEntry
+113 silly gunzTarPerm extractEntry
+114 silly gunzTarPerm extractEntry
+115 silly gunzTarPerm extractEntry
+116 silly gunzTarPerm extractEntry
+117 silly gunzTarPerm extractEntry
+118 silly gunzTarPerm extractEntry
+119 silly gunzTarPerm extractEntry
+120 silly gunzTarPerm extractEntry
+121 silly gunzTarPerm extractEntry
+122 silly gunzTarPerm extractEntry
+123 silly gunzTarPerm extractEntry
+124 silly gunzTarPerm extractEntry
+125 silly gunzTarPerm extractEntry
+126 silly gunzTarPerm extractEntry
+127 silly gunzTarPerm extractEntry
+128 silly gunzTarPerm extractEntry
+129 silly gunzTarPerm extractEntry
+130 silly gunzTarPerm extractEntry
+131 silly gunzTarPerm extractEntry
+132 silly gunzTarPerm extractEntry
+133 silly gunzTarPerm extractEntry
+134 silly gunzTarPerm extractEntry
+135 silly gunzTarPerm extractEntry
+136 silly gunzTarPerm extractEntry
+137 silly gunzTarPerm extractEntry
+138 silly gunzTarPerm extractEntry
+139 silly gunzTarPerm extractEntry
+140 silly gunzTarPerm extractEntry
+141 silly gunzTarPerm extractEntry
+142 silly gunzTarPerm extractEntry
+143 silly gunzTarPerm extractEntry
+144 silly gunzTarPerm extractEntry
+145 silly gunzTarPerm extractEntry
+146 silly gunzTarPerm extractEntry
+147 silly gunzTarPerm extractEntry
+148 silly gunzTarPerm extractEntry
+149 silly gunzTarPerm extractEntry
+150 silly gunzTarPerm extractEntry
+151 silly gunzTarPerm extractEntry
+152 silly gunzTarPerm extractEntry
+153 silly gunzTarPerm extractEntry
+154 silly gunzTarPerm extractEntry
+155 silly gunzTarPerm extractEntry
+156 silly gunzTarPerm extractEntry
+157 silly gunzTarPerm extractEntry
+158 silly gunzTarPerm extractEntry
+159 silly gunzTarPerm extractEntry
+160 silly gunzTarPerm extractEntry
+161 silly gunzTarPerm extractEntry
+162 silly gunzTarPerm extractEntry
+163 silly gunzTarPerm extractEntry
+164 silly gunzTarPerm extractEntry
+165 verbose unlock done using /Users/anzhen/.npm/_locks/types-node-9d4da3653e0c941c.lock for /Users/anzhen/go/src/ai-test/packages/node_modules/@types/node
+166 verbose stack Error: ENOTDIR: not a directory, open '/Users/anzhen/go/src/ai-test/packages/node_modules/@types/node/package.json'
+167 verbose cwd /Users/anzhen/go/src/ai-test/packages
+168 error Darwin 25.3.0
+169 error argv "/Users/anzhen/.nvm/versions/node/v21.6.1/bin/node" "/Users/anzhen/node_modules/.bin/npm" "install" "--save-dev" "@types/node"
+170 error node v21.6.1
+171 error npm  v2.15.12
+172 error path /Users/anzhen/go/src/ai-test/packages/node_modules/@types/node/package.json
+173 error code ENOTDIR
+174 error errno -20
+175 error syscall open
+176 error ENOTDIR: not a directory, open '/Users/anzhen/go/src/ai-test/packages/node_modules/@types/node/package.json'
+177 error If you need help, you may report this error at:
+177 error     <https://github.com/npm/npm/issues>
+178 verbose exit [ -20, true ]
+179 verbose unbuild node_modules/@types/node
+180 silly gentlyRm /Users/anzhen/go/src/ai-test/packages/node_modules/@types/node is being purged from base /Users/anzhen/go/src/ai-test/packages
+181 verbose gentlyRm don't care about contents; nuking /Users/anzhen/go/src/ai-test/packages/node_modules/@types/node
+182 silly vacuum-fs purging /Users/anzhen/go/src/ai-test/packages/node_modules/@types/node
+183 silly vacuum-fs removing /Users/anzhen/go/src/ai-test/packages/node_modules/@types
+184 silly vacuum-fs quitting because other entries in /Users/anzhen/go/src/ai-test/packages/node_modules

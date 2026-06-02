@@ -1,0 +1,291 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   '/Users/anzhen/.nvm/versions/node/v21.6.1/bin/node',
+1 verbose cli   '/Users/anzhen/node_modules/.bin/npm',
+1 verbose cli   'install'
+1 verbose cli ]
+2 info using npm@2.15.12
+3 info using node@v21.6.1
+4 verbose readDependencies loading dependencies from /Users/anzhen/go/src/ai-test/packages/mobile/package.json
+5 verbose install where, deps [
+5 verbose install   '/Users/anzhen/go/src/ai-test/packages/mobile',
+5 verbose install   [
+5 verbose install     'expo',
+5 verbose install     'expo-status-bar',
+5 verbose install     'react',
+5 verbose install     'react-native',
+5 verbose install     '@react-navigation/native',
+5 verbose install     '@react-navigation/native-stack',
+5 verbose install     '@react-native-async-storage/async-storage',
+5 verbose install     '@babel/core',
+5 verbose install     '@types/react',
+5 verbose install     'typescript'
+5 verbose install   ]
+5 verbose install ]
+6 verbose install where, peers [ '/Users/anzhen/go/src/ai-test/packages/mobile', [] ]
+7 verbose installManyTop reading for lifecycle /Users/anzhen/go/src/ai-test/packages/mobile/package.json
+8 info preinstall mobile@1.0.0
+9 verbose installManyTop reading scoped package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/expo/package.json
+10 verbose installManyTop reading scoped package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/expo-status-bar/package.json
+11 verbose installManyTop reading scoped package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/react/package.json
+12 verbose installManyTop reading scoped package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/react-native/package.json
+13 verbose installManyTop reading scoped package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/react-native-safe-area-context/package.json
+14 verbose installManyTop reading scoped package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/react-native-screens/package.json
+15 verbose installManyTop reading scoped package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/typescript/package.json
+16 verbose installManyTop reading scoped package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@babel/core/package.json
+17 verbose installManyTop reading scoped package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@react-native-async-storage/async-storage/package.json
+18 verbose installManyTop reading scoped package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@react-navigation/native/package.json
+19 verbose installManyTop reading scoped package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@react-navigation/native-stack/package.json
+20 verbose readDependencies loading dependencies from /Users/anzhen/go/src/ai-test/packages/mobile/package.json
+21 verbose targetResolver reading package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/expo/package.json
+22 verbose targetResolver reading package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/expo-status-bar/package.json
+23 verbose targetResolver reading package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/react/package.json
+24 verbose targetResolver reading package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/react-native/package.json
+25 verbose targetResolver reading package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/react-native-safe-area-context/package.json
+26 verbose targetResolver reading package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/react-native-screens/package.json
+27 verbose targetResolver reading package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/typescript/package.json
+28 verbose targetResolver reading package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@babel/core/package.json
+29 verbose targetResolver reading package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@react-native-async-storage/async-storage/package.json
+30 verbose targetResolver reading package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@react-navigation/native/package.json
+31 verbose targetResolver reading package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@react-navigation/native-stack/package.json
+32 verbose targetResolver reading package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/.bin/tsc/package.json
+33 verbose targetResolver reading package data from /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/.bin/tsserver/package.json
+34 silly cache add args [ '@types/react@~18.3.12', null ]
+35 verbose cache add spec @types/react@~18.3.12
+36 silly cache add parsed spec Result {
+36 silly cache add   raw: '@types/react@~18.3.12',
+36 silly cache add   scope: '@types',
+36 silly cache add   name: '@types/react',
+36 silly cache add   rawSpec: '~18.3.12',
+36 silly cache add   spec: '>=18.3.12 <18.4.0',
+36 silly cache add   type: 'range'
+36 silly cache add }
+37 silly addNamed @types/react@>=18.3.12 <18.4.0
+38 verbose addNamed ">=18.3.12 <18.4.0" is a valid semver range for @types/react
+39 silly addNameRange { name: '@types/react', range: '>=18.3.12 <18.4.0', hasData: false }
+40 silly mapToRegistry name @types/react
+41 silly mapToRegistry scope (from package name) @types
+42 verbose mapToRegistry no registry URL found in name for scope @types
+43 silly mapToRegistry using default registry
+44 silly mapToRegistry registry https://registry.npmjs.org/
+45 silly mapToRegistry data Result {
+45 silly mapToRegistry   raw: '@types/react',
+45 silly mapToRegistry   scope: '@types',
+45 silly mapToRegistry   name: '@types/react',
+45 silly mapToRegistry   rawSpec: '',
+45 silly mapToRegistry   spec: 'latest',
+45 silly mapToRegistry   type: 'tag'
+45 silly mapToRegistry }
+46 silly mapToRegistry uri https://registry.npmjs.org/@types%2freact
+47 verbose addNameRange registry:https://registry.npmjs.org/@types%2freact not in flight; fetching
+48 verbose already installed skipping typescript@^5.3.0 /Users/anzhen/go/src/ai-test/packages/mobile
+49 verbose already installed skipping expo@~52.0.0 /Users/anzhen/go/src/ai-test/packages/mobile
+50 verbose already installed skipping expo-status-bar@~2.0.0 /Users/anzhen/go/src/ai-test/packages/mobile
+51 verbose already installed skipping react@18.3.1 /Users/anzhen/go/src/ai-test/packages/mobile
+52 verbose request uri https://registry.npmjs.org/@types%2freact
+53 verbose request no auth needed
+54 info attempt registry request try #1 at 7:14:39 PM
+55 verbose request id b7a7a437a6df3347
+56 verbose etag W/"d1c7099451572d8d8618f855cd57cda2"
+57 verbose lastModified Wed, 01 Apr 2026 17:46:28 GMT
+58 http request GET https://registry.npmjs.org/@types%2freact
+59 verbose already installed skipping react-native@0.76.6 /Users/anzhen/go/src/ai-test/packages/mobile
+60 verbose already installed skipping @react-navigation/native@^6.1.18 /Users/anzhen/go/src/ai-test/packages/mobile
+61 verbose already installed skipping @react-navigation/native-stack@^6.11.0 /Users/anzhen/go/src/ai-test/packages/mobile
+62 verbose already installed skipping @react-native-async-storage/async-storage@1.23.1 /Users/anzhen/go/src/ai-test/packages/mobile
+63 verbose already installed skipping @babel/core@^7.25.0 /Users/anzhen/go/src/ai-test/packages/mobile
+64 http 304 https://registry.npmjs.org/@types%2freact
+65 verbose headers {
+65 verbose headers   date: 'Fri, 08 May 2026 11:14:40 GMT',
+65 verbose headers   connection: 'keep-alive',
+65 verbose headers   'set-cookie': [
+65 verbose headers     '_cfuvid=_2hfzYpz_PBOrr2IMc5MOePHvzwMIjd5cE84mFhuqzA-1778238880.303691-1.0.1.1-pq10tGWYklGUMjDamcLw.O882UnMxh_EQI6LVsTzn6s; HttpOnly; SameSite=None; Secure; Path=/; Domain=npmjs.org'
+65 verbose headers   ],
+65 verbose headers   'cf-ray': '9f880ac9e8ea28ee-HKG',
+65 verbose headers   'cf-cache-status': 'HIT',
+65 verbose headers   'access-control-allow-origin': '*',
+65 verbose headers   age: '138',
+65 verbose headers   'cache-control': 'public, max-age=300',
+65 verbose headers   etag: '"d1c7099451572d8d8618f855cd57cda2"',
+65 verbose headers   'last-modified': 'Wed, 01 Apr 2026 17:46:28 GMT',
+65 verbose headers   server: 'cloudflare',
+65 verbose headers   vary: 'Accept-Encoding'
+65 verbose headers }
+66 silly get cb [
+66 silly get   304,
+66 silly get   {
+66 silly get     date: 'Fri, 08 May 2026 11:14:40 GMT',
+66 silly get     connection: 'keep-alive',
+66 silly get     'set-cookie': [
+66 silly get       '_cfuvid=_2hfzYpz_PBOrr2IMc5MOePHvzwMIjd5cE84mFhuqzA-1778238880.303691-1.0.1.1-pq10tGWYklGUMjDamcLw.O882UnMxh_EQI6LVsTzn6s; HttpOnly; SameSite=None; Secure; Path=/; Domain=npmjs.org'
+66 silly get     ],
+66 silly get     'cf-ray': '9f880ac9e8ea28ee-HKG',
+66 silly get     'cf-cache-status': 'HIT',
+66 silly get     'access-control-allow-origin': '*',
+66 silly get     age: '138',
+66 silly get     'cache-control': 'public, max-age=300',
+66 silly get     etag: '"d1c7099451572d8d8618f855cd57cda2"',
+66 silly get     'last-modified': 'Wed, 01 Apr 2026 17:46:28 GMT',
+66 silly get     server: 'cloudflare',
+66 silly get     vary: 'Accept-Encoding'
+66 silly get   }
+66 silly get ]
+67 verbose etag https://registry.npmjs.org/@types%2freact from cache
+68 verbose get saving @types/react to /Users/anzhen/.npm/registry.npmjs.org/_40types_252freact/.cache.json
+69 verbose correctMkdir /Users/anzhen/.npm correctMkdir not in flight; initializing
+70 silly addNameRange number 2 { name: '@types/react', range: '>=18.3.12 <18.4.0', hasData: true }
+71 silly addNameRange versions [
+71 silly addNameRange   '@types/react',
+71 silly addNameRange   [
+71 silly addNameRange     '0.14.14-alpha', '0.14.15-alpha', '0.14.20-alpha', '0.14.21-alpha',
+71 silly addNameRange     '0.14.22-alpha', '0.14.23-alpha', '0.14.24-alpha', '0.14.25-alpha',
+71 silly addNameRange     '0.14.26-alpha', '0.14.27',       '0.14.28',       '0.14.29',
+71 silly addNameRange     '0.14.30',       '0.14.31',       '0.14.32',       '0.14.33',
+71 silly addNameRange     '0.14.34',       '0.14.35',       '0.14.36',       '0.14.37',
+71 silly addNameRange     '0.14.38',       '0.14.39',       '0.14.40',       '0.14.41',
+71 silly addNameRange     '0.14.42',       '0.14.43',       '0.14.44',       '0.14.45',
+71 silly addNameRange     '0.14.46',       '0.14.47',       '0.14.48',       '0.14.49',
+71 silly addNameRange     '0.14.50',       '0.14.51',       '0.14.52',       '0.14.53',
+71 silly addNameRange     '0.14.54',       '0.14.55',       '0.14.56',       '0.14.57',
+71 silly addNameRange     '0.0.0',         '15.0.0',        '15.0.1',        '15.0.2',
+71 silly addNameRange     '15.0.3',        '15.0.4',        '15.0.5',        '15.0.6',
+71 silly addNameRange     '15.0.7',        '15.0.8',        '15.0.9',        '15.0.10',
+71 silly addNameRange     '15.0.11',       '15.0.12',       '15.0.13',       '15.0.14',
+71 silly addNameRange     '15.0.15',       '15.0.16',       '15.0.17',       '15.0.18',
+71 silly addNameRange     '15.0.19',       '15.0.20',       '15.0.21',       '15.0.22',
+71 silly addNameRange     '15.0.23',       '15.0.24',       '15.0.25',       '15.0.26',
+71 silly addNameRange     '15.0.27',       '15.0.28',       '15.0.29',       '15.0.30',
+71 silly addNameRange     '15.0.31',       '15.0.32',       '15.0.33',       '15.0.34',
+71 silly addNameRange     '15.0.35',       '15.0.36',       '15.0.37',       '15.0.38',
+71 silly addNameRange     '15.0.39',       '15.6.0',        '16.0.0',        '15.6.1',
+71 silly addNameRange     '16.0.1',        '16.0.2',        '16.0.3',        '16.0.4',
+71 silly addNameRange     '16.0.5',        '15.6.2',        '16.0.6',        '15.6.3',
+71 silly addNameRange     '15.6.4',        '16.0.7',        '16.0.8',        '16.0.9',
+71 silly addNameRange     '16.0.10',       '16.0.11',       '16.0.12',       '16.0.13',
+71 silly addNameRange     ... 595 more items
+71 silly addNameRange   ]
+71 silly addNameRange ]
+72 silly addNamed @types/react@18.3.28
+73 verbose addNamed "18.3.28" is a plain semver version for @types/react
+74 silly cache afterAdd @types/react@18.3.28
+75 verbose afterAdd /Users/anzhen/.npm/@types/react/18.3.28/package/package.json not in flight; writing
+76 verbose correctMkdir /Users/anzhen/.npm correctMkdir not in flight; initializing
+77 verbose afterAdd /Users/anzhen/.npm/@types/react/18.3.28/package/package.json written
+78 silly install resolved [
+78 silly install resolved   {
+78 silly install resolved     name: '@types/react',
+78 silly install resolved     version: '18.3.28',
+78 silly install resolved     license: 'MIT',
+78 silly install resolved     _id: '@types/react@18.3.28',
+78 silly install resolved     maintainers: [ [Object] ],
+78 silly install resolved     contributors: [
+78 silly install resolved       [Object], [Object], [Object],
+78 silly install resolved       [Object], [Object], [Object],
+78 silly install resolved       [Object], [Object], [Object],
+78 silly install resolved       [Object], [Object], [Object],
+78 silly install resolved       [Object], [Object], [Object],
+78 silly install resolved       [Object], [Object], [Object],
+78 silly install resolved       [Object], [Object], [Object],
+78 silly install resolved       [Object], [Object], [Object],
+78 silly install resolved       [Object], [Object], [Object]
+78 silly install resolved     ],
+78 silly install resolved     homepage: 'https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react',
+78 silly install resolved     dist: {
+78 silly install resolved       shasum: '0a85b1a7243b4258d9f626f43797ba18eb5f8781',
+78 silly install resolved       tarball: 'https://registry.npmjs.org/@types/react/-/react-18.3.28.tgz',
+78 silly install resolved       fileCount: 17,
+78 silly install resolved       integrity: 'sha512-z9VXpC7MWrhfWipitjNdgCauoMLRdIILQsAEV+ZesIzBq/oUlxk0m3ApZuMFCXdnS4U7KrI+l3WRUEGQ8K1QKw==',
+78 silly install resolved       signatures: [Array],
+78 silly install resolved       unpackedSize: 441805
+78 silly install resolved     },
+78 silly install resolved     main: '',
+78 silly install resolved     types: 'index.d.ts',
+78 silly install resolved     exports: {
+78 silly install resolved       '.': [Object],
+78 silly install resolved       './canary': [Object],
+78 silly install resolved       './jsx-runtime': [Object],
+78 silly install resolved       './experimental': [Object],
+78 silly install resolved       './package.json': './package.json',
+78 silly install resolved       './jsx-dev-runtime': [Object]
+78 silly install resolved     },
+78 silly install resolved     scripts: {},
+78 silly install resolved     _npmUser: { name: 'types', email: 'ts-npm-types@microsoft.com' },
+78 silly install resolved     repository: {
+78 silly install resolved       url: 'git+https://github.com/DefinitelyTyped/DefinitelyTyped.git',
+78 silly install resolved       type: 'git',
+78 silly install resolved       directory: 'types/react'
+78 silly install resolved     },
+78 silly install resolved     description: 'TypeScript definitions for react',
+78 silly install resolved     directories: {},
+78 silly install resolved     _nodeVersion: '24.13.0',
+78 silly install resolved     dependencies: { csstype: '^3.2.2', '@types/prop-types': '*' },
+78 silly install resolved     typesVersions: { '<=5.0': [Object] },
+78 silly install resolved     _hasShrinkwrap: false,
+78 silly install resolved     peerDependencies: {},
+78 silly install resolved     typeScriptVersion: '5.2',
+78 silly install resolved     _npmOperationalInternal: {
+78 silly install resolved       tmp: 'tmp/react_18.3.28_1770284711476_0.8236477980577552',
+78 silly install resolved       host: 's3://npm-registry-packages-npm-production'
+78 silly install resolved     },
+78 silly install resolved     typesPublisherContentHash: '0ea06bef541d937c6628af8b44027771d39c4189db995868d91ac6157c442c8f',
+78 silly install resolved     _shasum: '0a85b1a7243b4258d9f626f43797ba18eb5f8781',
+78 silly install resolved     _resolved: 'https://registry.npmjs.org/@types/react/-/react-18.3.28.tgz',
+78 silly install resolved     _from: '@types/react@>=18.3.12 <18.4.0',
+78 silly install resolved     bugs: {
+78 silly install resolved       url: 'https://github.com/DefinitelyTyped/DefinitelyTyped/issues'
+78 silly install resolved     },
+78 silly install resolved     readme: 'ERROR: No README data found!'
+78 silly install resolved   }
+78 silly install resolved ]
+79 info install @types/react@18.3.28 into /Users/anzhen/go/src/ai-test/packages/mobile
+80 info installOne @types/react@18.3.28
+81 verbose installOne of @types/react to /Users/anzhen/go/src/ai-test/packages/mobile not in flight; installing
+82 verbose correctMkdir /Users/anzhen/.npm/_locks correctMkdir not in flight; initializing
+83 verbose lock using /Users/anzhen/.npm/_locks/types-react-a06a33efb9124605.lock for /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@types/react
+84 silly install write writing @types/react 18.3.28 to /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@types/react
+85 verbose unbuild node_modules/@types/react
+86 silly gentlyRm /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@types/react is being purged from base /Users/anzhen/go/src/ai-test/packages/mobile
+87 verbose gentlyRm don't care about contents; nuking /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@types/react
+88 verbose tar unpack /Users/anzhen/.npm/@types/react/18.3.28/package.tgz
+89 verbose tar unpacking to /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@types/react
+90 silly gentlyRm /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@types/react is being purged
+91 verbose gentlyRm don't care about contents; nuking /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@types/react
+92 silly gunzTarPerm modes [ '755', '644' ]
+93 silly gunzTarPerm extractEntry
+94 silly gunzTarPerm extractEntry
+95 silly gunzTarPerm extractEntry
+96 silly gunzTarPerm extractEntry
+97 silly gunzTarPerm extractEntry
+98 silly gunzTarPerm extractEntry
+99 silly gunzTarPerm extractEntry
+100 silly gunzTarPerm extractEntry
+101 silly gunzTarPerm extractEntry
+102 silly gunzTarPerm extractEntry
+103 silly gunzTarPerm extractEntry
+104 silly gunzTarPerm extractEntry
+105 silly gunzTarPerm extractEntry
+106 silly gunzTarPerm extractEntry
+107 silly gunzTarPerm extractEntry
+108 silly gunzTarPerm extractEntry
+109 silly gunzTarPerm extractEntry
+110 verbose unlock done using /Users/anzhen/.npm/_locks/types-react-a06a33efb9124605.lock for /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@types/react
+111 verbose stack Error: ENOTDIR: not a directory, open '/Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@types/react/package.json'
+112 verbose cwd /Users/anzhen/go/src/ai-test/packages/mobile
+113 error Darwin 25.3.0
+114 error argv "/Users/anzhen/.nvm/versions/node/v21.6.1/bin/node" "/Users/anzhen/node_modules/.bin/npm" "install"
+115 error node v21.6.1
+116 error npm  v2.15.12
+117 error path /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@types/react/package.json
+118 error code ENOTDIR
+119 error errno -20
+120 error syscall open
+121 error ENOTDIR: not a directory, open '/Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@types/react/package.json'
+122 error If you need help, you may report this error at:
+122 error     <https://github.com/npm/npm/issues>
+123 verbose exit [ -20, true ]
+124 verbose unbuild node_modules/@types/react
+125 silly gentlyRm /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@types/react is being purged from base /Users/anzhen/go/src/ai-test/packages/mobile
+126 verbose gentlyRm don't care about contents; nuking /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@types/react
+127 silly vacuum-fs purging /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@types/react
+128 silly vacuum-fs removing /Users/anzhen/go/src/ai-test/packages/mobile/node_modules/@types
+129 silly vacuum-fs quitting because other entries in /Users/anzhen/go/src/ai-test/packages/mobile/node_modules
