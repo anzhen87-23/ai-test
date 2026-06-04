@@ -2,9 +2,20 @@
 
 #include "JSDecoratorsBridgingObject.h"
 
+#include "JSFunctionsDecorator.h"
+#include "JSPropertiesDecorator.h"
+#include "JSConstantsDecorator.h"
+#include "JSObjectDecorator.h"
 #include "JSClassesDecorator.h"
+#include "../types/ReturnType.h"
 
 namespace expo {
+
+JSDecoratorsBridgingObject::~JSDecoratorsBridgingObject() = default;
+
+JSClassesDecorator* JSDecoratorsBridgingObject::getClassDecorator() const {
+  return classDecorator.get();
+}
 
 jni::local_ref<jni::HybridClass<JSDecoratorsBridgingObject>::jhybriddata>
 JSDecoratorsBridgingObject::initHybrid(jni::alias_ref<jhybridobject> jThis) {
@@ -22,6 +33,8 @@ void JSDecoratorsBridgingObject::registerNatives() {
                                     JSDecoratorsBridgingObject::registerAsyncFunction),
                    makeNativeMethod("registerProperty",
                                     JSDecoratorsBridgingObject::registerProperty),
+                   makeNativeMethod("registerConstant",
+                                    JSDecoratorsBridgingObject::registerConstant),
                    makeNativeMethod("registerObject",
                                     JSDecoratorsBridgingObject::registerObject),
                    makeNativeMethod("registerClass",
@@ -34,13 +47,21 @@ void JSDecoratorsBridgingObject::registerSyncFunction(
   jboolean takesOwner,
   jboolean enumerable,
   jni::alias_ref<jni::JArrayClass<ExpectedType>> expectedArgTypes,
+  jint cppReturnType,
   jni::alias_ref<JNIFunctionBody::javaobject> body
 ) {
   if (!functionDecorator) {
     functionDecorator = std::make_unique<JSFunctionsDecorator>();
   }
 
-  functionDecorator->registerSyncFunction(name, takesOwner, enumerable, expectedArgTypes, body);
+  functionDecorator->registerSyncFunction(
+    name,
+    takesOwner,
+    enumerable,
+    expectedArgTypes,
+    (ReturnType)cppReturnType,
+    body
+  );
 }
 
 void JSDecoratorsBridgingObject::registerAsyncFunction(
@@ -81,7 +102,19 @@ void JSDecoratorsBridgingObject::registerProperty(
   );
 }
 
-void JSDecoratorsBridgingObject::registerConstants(jni::alias_ref<react::NativeMap::javaobject> constants) {
+void JSDecoratorsBridgingObject::registerConstant(
+  jni::alias_ref<jstring> name,
+  jni::alias_ref<JNINoArgsFunctionBody::javaobject> getter
+) {
+  if (!constantsDecorator) {
+    constantsDecorator = std::make_unique<JSConstantsDecorator>();
+  }
+
+  constantsDecorator->registerConstant(name, getter);
+}
+
+void JSDecoratorsBridgingObject::registerConstants(
+  jni::alias_ref<react::NativeMap::javaobject> constants) {
   if (!constantsDecorator) {
     constantsDecorator = std::make_unique<JSConstantsDecorator>();
   }
@@ -103,6 +136,7 @@ void JSDecoratorsBridgingObject::registerObject(
 void JSDecoratorsBridgingObject::registerClass(
   jni::alias_ref<jstring> name,
   jni::alias_ref<JSDecoratorsBridgingObject::javaobject> jsDecoratorsBridgingObject,
+  jni::alias_ref<JSDecoratorsBridgingObject::javaobject> jsDecoratorsConstructor,
   jboolean takesOwner,
   jni::alias_ref<jclass> ownerClass,
   jboolean isSharedRef,
@@ -116,6 +150,7 @@ void JSDecoratorsBridgingObject::registerClass(
   classDecorator->registerClass(
     name,
     jsDecoratorsBridgingObject,
+    jsDecoratorsConstructor,
     takesOwner,
     ownerClass,
     isSharedRef,

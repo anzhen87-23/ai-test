@@ -3,6 +3,7 @@ package expo.modules.kotlin.views
 import android.view.View
 import android.view.ViewGroup
 import com.facebook.react.uimanager.ReactStylesDiffMap
+import com.facebook.react.uimanager.StateWrapper
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.getBackingMap
@@ -11,7 +12,7 @@ import expo.modules.core.utilities.ifNull
 class GroupViewManagerWrapper(
   override val viewWrapperDelegate: ViewManagerWrapperDelegate
 ) : ViewGroupManager<ViewGroup>(), ViewWrapperDelegateHolder {
-  override fun getName(): String = "ViewManagerAdapter_${viewWrapperDelegate.name}"
+  override fun getName(): String = viewWrapperDelegate.viewManagerName
 
   override fun createViewInstance(reactContext: ThemedReactContext): ViewGroup =
     viewWrapperDelegate.createView(reactContext) as ViewGroup
@@ -20,6 +21,7 @@ class GroupViewManagerWrapper(
     val propsMap = props.getBackingMap()
     // Updates expo related properties.
     val handledProps = viewWrapperDelegate.updateProperties(viewToUpdate, propsMap)
+    viewWrapperDelegate.updateStateProps(viewToUpdate)
     // Updates remaining props using RN implementation.
     // To not triggered undefined setters we filtrated already handled properties.
     super.updateProperties(
@@ -33,10 +35,20 @@ class GroupViewManagerWrapper(
     viewWrapperDelegate.onViewDidUpdateProps(view)
   }
 
+  override fun updateState(
+    view: ViewGroup,
+    props: ReactStylesDiffMap?,
+    stateWrapper: StateWrapper?
+  ): Any? {
+    (view as? ExpoView)?.stateWrapper = stateWrapper
+    viewWrapperDelegate.updateStateProps(view)
+    return null
+  }
+
   override fun getNativeProps(): MutableMap<String, String> {
     val props = super.getNativeProps()
     viewWrapperDelegate.props.forEach { (key, prop) ->
-      props[key] = prop.type.kType.classifier.toString()
+      props[key] = prop.type.typeDescriptor.jClass.toString()
     }
     return props
   }
@@ -46,8 +58,8 @@ class GroupViewManagerWrapper(
     viewWrapperDelegate.onDestroy(view)
   }
 
-  override fun getExportedCustomDirectEventTypeConstants(): Map<String, Any>? {
-    val expoEvent = viewWrapperDelegate.getExportedCustomDirectEventTypeConstants() ?: emptyMap()
+  override fun getExportedCustomDirectEventTypeConstants(): Map<String, Any> {
+    val expoEvent = viewWrapperDelegate.getExportedCustomDirectEventTypeConstants()
     return super.getExportedCustomDirectEventTypeConstants()?.plus(expoEvent) ?: expoEvent
   }
 

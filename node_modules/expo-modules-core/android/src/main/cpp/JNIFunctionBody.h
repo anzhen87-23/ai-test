@@ -2,13 +2,30 @@
 
 #pragma once
 
-#include <fbjni/fbjni.h>
-#include <react/jni/ReadableNativeArray.h>
+#include "ExpoHeader.pch"
 
 namespace jni = facebook::jni;
 namespace react = facebook::react;
 
 namespace expo {
+/**
+ * A CPP part of the expo.modules.kotlin.jni.JNINoArgsFunctionBody class.
+ * It represents the Kotlin's promise-less function.
+ */
+class JNINoArgsFunctionBody : public jni::JavaClass<JNINoArgsFunctionBody> {
+public:
+  static auto constexpr kJavaDescriptor = "Lexpo/modules/kotlin/jni/JNINoArgsFunctionBody;";
+
+  /**
+   * Invokes a Kotlin's implementation of this function.
+   *
+   * @return result of the Kotlin function
+   */
+  static jni::local_ref<jni::JObject> invoke(
+    jobject self
+  );
+};
+
 /**
  * A CPP part of the expo.modules.kotlin.jni.JNIFunctionBody class.
  * It represents the Kotlin's promise-less function.

@@ -2,6 +2,11 @@ import { useCallback, useEffect, useImperativeHandle, type DependencyList, type 
 
 import type { DOMImperativeFactory } from './dom.types';
 import { REGISTER_DOM_IMPERATIVE_HANDLE_PROPS } from './injection';
+import { getWebViewBridge, hasWebViewBridge } from './webview-bridge';
+
+declare namespace globalThis {
+  let _domRefProxy: undefined | unknown;
+}
 
 /**
  * A React `useImperativeHandle` like hook for DOM components.
@@ -12,8 +17,7 @@ export function useDOMImperativeHandle<T extends DOMImperativeFactory>(
   init: () => T,
   deps?: DependencyList
 ) {
-  // @ts-expect-error: Added via react-native-webview
-  const isTargetWeb = typeof window.ReactNativeWebView === 'undefined';
+  const isTargetWeb = !hasWebViewBridge() && typeof window.$$EXPO_INITIAL_PROPS === 'undefined';
 
   const stubHandlerFactory = useCallback(() => ({}) as T, deps ?? []);
 
@@ -24,11 +28,10 @@ export function useDOMImperativeHandle<T extends DOMImperativeFactory>(
   useEffect(() => {
     if (!isTargetWeb) {
       globalThis._domRefProxy = init();
-      // @ts-expect-error: Added via react-native-webview
-      window.ReactNativeWebView.postMessage(
+      getWebViewBridge().postMessage(
         JSON.stringify({
           type: REGISTER_DOM_IMPERATIVE_HANDLE_PROPS,
-          data: Object.keys(globalThis._domRefProxy),
+          data: Object.keys(globalThis._domRefProxy as any),
         })
       );
     }

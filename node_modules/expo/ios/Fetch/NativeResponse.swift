@@ -5,7 +5,7 @@ import ExpoModulesCore
 /**
  A SharedObject for response.
  */
-internal final class NativeResponse: SharedObject, ExpoURLSessionTaskDelegate {
+internal final class NativeResponse: SharedObject, ExpoURLSessionTaskDelegate, @unchecked Sendable {
   internal let sink: ResponseSink
 
   private let dispatchQueue: DispatchQueue
@@ -26,6 +26,7 @@ internal final class NativeResponse: SharedObject, ExpoURLSessionTaskDelegate {
   private(set) var responseInit: NativeResponseInit?
   private(set) var redirected = false
   private(set) var error: Error?
+  var redirectMode: NativeRequestRedirect = .follow
 
   var bodyUsed: Bool {
     return self.sink.bodyUsed
@@ -43,7 +44,7 @@ internal final class NativeResponse: SharedObject, ExpoURLSessionTaskDelegate {
     if state == .responseReceived {
       state = .bodyStreamingStarted
       let queuedData = self.sink.finalize()
-      emit(event: "didReceiveResponseData", arguments: queuedData)
+      emit(event: "didReceiveResponseData", payload: queuedData)
     } else if state == .bodyCompleted {
       let queuedData = self.sink.finalize()
       return queuedData
@@ -62,7 +63,7 @@ internal final class NativeResponse: SharedObject, ExpoURLSessionTaskDelegate {
     let error = FetchRequestCanceledException()
     self.error = error
     if state == .bodyStreamingStarted {
-      emit(event: "didFailWithError", arguments: error.localizedDescription)
+      emit(event: "didFailWithError", payload: error.localizedDescription)
     }
     state = .errorReceived
     emit(event: "readyForJSFinalization")
@@ -71,7 +72,7 @@ internal final class NativeResponse: SharedObject, ExpoURLSessionTaskDelegate {
   /**
    Waits for given states and when it meets the requirement, executes the callback.
    */
-  func waitFor(states: [ResponseState], callback: @escaping (ResponseState) -> Void) {
+  func waitFor(states: [ResponseState], callback: @escaping @Sendable (ResponseState) -> Void) {
     if states.contains(state) {
       callback(state)
       return
@@ -151,13 +152,31 @@ internal final class NativeResponse: SharedObject, ExpoURLSessionTaskDelegate {
     if state == .responseReceived {
       self.sink.appendBufferBody(data: data)
     } else if state == .bodyStreamingStarted {
-      emit(event: "didReceiveResponseData", arguments: data)
+      emit(event: "didReceiveResponseData", payload: data)
     }
     // no-op in .bodyStreamingCanceled state
   }
 
-  func urlSession(_ session: ExpoURLSessionTask, didRedirect response: URLResponse) {
-    redirected = true
+  func urlSession(
+    _ session: ExpoURLSessionTask,
+    task: URLSessionTask,
+    willPerformHTTPRedirection response: HTTPURLResponse,
+    newRequest request: URLRequest,
+    completionHandler: @escaping (URLRequest?) -> Void
+  ) {
+    let shouldFollowRedirects = self.redirectMode == .follow
+    completionHandler(shouldFollowRedirects ? request : nil)
+    self.redirected = shouldFollowRedirects
+
+    if self.redirectMode == .error {
+      let error = FetchRedirectException()
+      self.error = error
+      if state == .bodyStreamingStarted {
+        emit(event: "didFailWithError", payload: error.localizedDescription)
+      }
+      state = .errorReceived
+      emit(event: "readyForJSFinalization")
+    }
   }
 
   func urlSession(_ session: ExpoURLSessionTask, task: URLSessionTask, didCompleteWithError error: (any Error)?) {
@@ -190,7 +209,7 @@ internal final class NativeResponse: SharedObject, ExpoURLSessionTaskDelegate {
 
     if state == .bodyStreamingStarted {
       if let error {
-        emit(event: "didFailWithError", arguments: error.localizedDescription)
+        emit(event: "didFailWithError", payload: error.localizedDescription)
       } else {
         emit(event: "didComplete")
       }

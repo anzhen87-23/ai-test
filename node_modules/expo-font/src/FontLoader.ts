@@ -2,7 +2,7 @@ import { Asset } from 'expo-asset';
 import { CodedError } from 'expo-modules-core';
 
 import ExpoFontLoader from './ExpoFontLoader';
-import { FontResource, FontSource } from './Font.types';
+import type { FontResource, FontSource } from './Font.types';
 
 export function getAssetForSource(source: FontSource): Asset | FontResource {
   if (source instanceof Asset) {
@@ -17,9 +17,6 @@ export function getAssetForSource(source: FontSource): Asset | FontResource {
     return getAssetForSource(source.uri);
   }
 
-  // @ts-ignore Error: Type 'string' is not assignable to type 'Asset'
-  // We can't have a string here, we would have thrown an error if !isWeb
-  // or returned Asset.fromModule if isWeb.
   return source;
 }
 
