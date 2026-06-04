@@ -4,7 +4,7 @@
 1 verbose cli   '/Users/anzhen/node_modules/.bin/npm',
 1 verbose cli   'run',
 1 verbose cli   'dev',
-1 verbose cli   '--workspace=packages/server'
+1 verbose cli   '--workspace=packages/web'
 1 verbose cli ]
 2 info using npm@2.15.12
 3 info using node@v21.6.1
@@ -22,9 +22,9 @@
 9 verbose stack     at maybeClose (node:internal/child_process:1105:16)
 9 verbose stack     at ChildProcess._handle.onexit (node:internal/child_process:305:5)
 10 verbose pkgid anzhen-ai-notes@
-11 verbose cwd /Users/anzhen/go/src/ai-test
+11 verbose cwd /Users/anzhen/publicGit/ai-test
 12 error Darwin 25.3.0
-13 error argv "/Users/anzhen/.nvm/versions/node/v21.6.1/bin/node" "/Users/anzhen/node_modules/.bin/npm" "run" "dev" "--workspace=packages/server"
+13 error argv "/Users/anzhen/.nvm/versions/node/v21.6.1/bin/node" "/Users/anzhen/node_modules/.bin/npm" "run" "dev" "--workspace=packages/web"
 14 error node v21.6.1
 15 error npm  v2.15.12
 16 error code ELIFECYCLE
