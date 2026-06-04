@@ -49,6 +49,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(135deg, var(--blue) 0%, #6C63FF 50%, var(--red) 100%);
+  position: relative;
 }
 
 .auth-form {
@@ -1674,4 +1675,38 @@ body {
   letter-spacing: 0.05em;
   margin-right: 0.5rem;
   flex-shrink: 0;
+}
+
+/* ── ICP Footer (auth page only) ── */
+.auth-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icp-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.icp-content a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.icp-content a:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.icp-divider {
+  opacity: 0.3;
 }

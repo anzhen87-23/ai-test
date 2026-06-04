@@ -40,6 +40,14 @@ function AuthForm({ mode, onSubmit, onSwitch }) {
           </button>
         </p>
       </form>
+      {/* ICP Footer */}
+      <footer className="auth-footer">
+        <div className="icp-content">
+          <span>安振的个人网站</span>
+          <span className="icp-divider">|</span>
+          <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">京ICP备2026030842号-1</a>
+        </div>
+      </footer>
     </div>
   );
 }
